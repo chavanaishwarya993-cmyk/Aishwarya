@@ -1,0 +1,58 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        container{
+            display: flex;
+            justifycontent: space-around;
+        }
+        ec{
+            height:500px;
+            width:100px;
+            border:1px solid;
+        }
+    </style>    
+</head>
+<body>
+    <h1>product list</h1>
+    <button onclick="getproduct()"></button>show product</button>
+    <div id="container"></div>
+    
+    <script>
+        let card=document.getElementBy("container");
+        let product= [{
+            pname:"watch",
+            cname:"titan",
+            price:4000,
+            img:""
+        },{
+            pname:"mobile",
+            cname:"vivo",
+            price:90000,
+            img:""
+        },{
+            pname:"laptop",
+            cname:"HP",
+            price:50000,
+            img:""
+        },{
+            pname:"headphones",
+            cname:"noice",
+            price:2000,
+            img:""
+        }]
+
+        function getproduct(){
+            product.forEach((val)=>{
+                card.innerHTML+=`<div id="c"<img src=${val.img}alt="">
+                <h2>product name:${val.pname}</h2>
+                <h3>cname name:${val.cname}</h3>
+                <h4>price:${val.price}</h4></div>`
+            })
+        }
+    </script>    
+</body>
+</html>
